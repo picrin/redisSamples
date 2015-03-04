@@ -116,6 +116,9 @@ endif
 hiredis-example: examples/example.c $(STLIBNAME)
 	$(CC) -o examples/$@ $(REAL_CFLAGS) $(REAL_LDFLAGS) -I. $< $(STLIBNAME)
 
+2048: examples/2048redis.c $(STLIBNAME)
+	$(CC) -o examples/$@ $(REAL_CFLAGS) $(REAL_LDFLAGS) -I. $< $(STLIBNAME)
+
 examples: $(EXAMPLES)
 
 hiredis-test: test.o $(STLIBNAME)
